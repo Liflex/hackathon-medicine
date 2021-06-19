@@ -20,4 +20,9 @@ public class ClientService {
     public Client findClientByUsername(String username) {
         return clientRepository.findClientByUsername(username).orElseThrow(() -> new EntityNotFoundException(String.format("Client with username not found {}", username)));
     }
+
+    public Client findClientByFIO(String firstName, String lastName, String middleName) {
+        return clientRepository.findClientByFirstNameContainsAndLastNameContainsAndMiddleNameContains
+                (firstName, lastName, middleName).orElse(null);
+    }
 }
