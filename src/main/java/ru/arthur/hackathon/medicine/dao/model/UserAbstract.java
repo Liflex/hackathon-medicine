@@ -15,14 +15,14 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Getter
 @Setter
 @RequiredArgsConstructor
 public class UserAbstract {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     private String firstName; //Имя
@@ -31,7 +31,8 @@ public class UserAbstract {
     private String username; //Логин
     private String password; //Пароль
 
-    private String role; //Роль в системе
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @CreationTimestamp
     private Date createdAt;
@@ -40,7 +41,7 @@ public class UserAbstract {
     private Date updatedAt;
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority(this.role));
+        return Collections.singleton(new SimpleGrantedAuthority(this.role.toString()));
     }
 
     @Override

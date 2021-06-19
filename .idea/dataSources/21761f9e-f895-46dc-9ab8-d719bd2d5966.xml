@@ -789,11 +789,11 @@ false Zulu
     <database id="2" parent="1" name="medicine">
       <ObjectId>35742</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2351</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2385</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|35753|35755|1
-sequence|table|35761|35763|1
-sequence|table|35769|35771|1
+      <Relations>sequence|table|35812|35814|1
+sequence|table|35825|35827|1
+sequence|table|35833|35835|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -885,7 +885,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2352</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2386</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="22" parent="2" name="plpgsql">
@@ -992,66 +992,81 @@ UC/10
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="35" parent="21" name="check_list_criteria_id_seq">
-      <ObjectId>35753</ObjectId>
+      <ObjectId>35812</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2373</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="36" parent="21" name="criteria_code_id_seq">
-      <ObjectId>35769</ObjectId>
+      <ObjectId>35833</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2117</StateNumber>
+      <StateNumber>2376</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <sequence id="37" parent="21" name="criteria_id_seq">
-      <ObjectId>35761</ObjectId>
+      <ObjectId>35825</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2116</StateNumber>
+      <StateNumber>2375</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
     <table id="38" parent="21" name="check_list_criteria">
-      <ObjectId>35755</ObjectId>
+      <ObjectId>35814</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2118</StateNumber>
+      <StateNumber>2380</StateNumber>
     </table>
-    <table id="39" parent="21" name="criteria">
-      <ObjectId>35763</ObjectId>
+    <table id="39" parent="21" name="client">
+      <ObjectId>35820</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2118</StateNumber>
+      <StateNumber>2381</StateNumber>
     </table>
-    <table id="40" parent="21" name="criteria_code">
-      <ObjectId>35771</ObjectId>
+    <table id="40" parent="21" name="criteria">
+      <ObjectId>35827</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2119</StateNumber>
+      <StateNumber>2380</StateNumber>
     </table>
-    <table id="41" parent="21" name="user_abstract">
-      <ObjectId>35743</ObjectId>
+    <table id="41" parent="21" name="criteria_code">
+      <ObjectId>35835</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2109</StateNumber>
+      <StateNumber>2382</StateNumber>
     </table>
-    <column id="42" parent="38" name="id">
+    <table id="42" parent="21" name="doctor">
+      <ObjectId>35841</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2383</StateNumber>
+    </table>
+    <table id="43" parent="21" name="expert">
+      <ObjectId>35846</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2384</StateNumber>
+    </table>
+    <table id="44" parent="21" name="user_abstract">
+      <ObjectId>35851</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2381</StateNumber>
+    </table>
+    <column id="45" parent="38" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2373</StateNumber>
       <DefaultExpression>nextval(&apos;check_list_criteria_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="43" parent="38" name="description">
+    <column id="46" parent="38" name="description">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2373</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="38" name="criteria_id">
+    <column id="47" parent="38" name="criteria_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>2115</StateNumber>
+      <StateNumber>2373</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="45" parent="38" name="check_list_criteria_pkey">
-      <ObjectId>35759</ObjectId>
-      <StateNumber>2115</StateNumber>
+    <index id="48" parent="38" name="check_list_criteria_pkey">
+      <ObjectId>35818</ObjectId>
+      <StateNumber>2373</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1059,40 +1074,33 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="46" parent="38" name="check_list_criteria_pkey">
-      <ObjectId>35760</ObjectId>
-      <StateNumber>2115</StateNumber>
+    <key id="49" parent="38" name="check_list_criteria_pkey">
+      <ObjectId>35819</ObjectId>
+      <StateNumber>2373</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>check_list_criteria_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="47" parent="38" name="fk576ti5gj2k0ecssa91y7egird">
-      <ObjectId>35777</ObjectId>
-      <StateNumber>2118</StateNumber>
+    <foreign-key id="50" parent="38" name="fk576ti5gj2k0ecssa91y7egird">
+      <ObjectId>35859</ObjectId>
+      <StateNumber>2380</StateNumber>
       <ColNames>criteria_id</ColNames>
-      <RefTableId>35763</RefTableId>
+      <RefTableId>35827</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>criteria</RefTableName>
       <RefKeyName>criteria_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="48" parent="39" name="id">
+    <column id="51" parent="39" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2116</StateNumber>
-      <DefaultExpression>nextval(&apos;criteria_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>2374</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="49" parent="39" name="description">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2116</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="50" parent="39" name="criteria_pkey">
-      <ObjectId>35767</ObjectId>
-      <StateNumber>2116</StateNumber>
+    <index id="52" parent="39" name="client_pkey">
+      <ObjectId>35823</ObjectId>
+      <StateNumber>2374</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1100,36 +1108,77 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="51" parent="39" name="criteria_pkey">
-      <ObjectId>35768</ObjectId>
-      <StateNumber>2116</StateNumber>
+    <key id="53" parent="39" name="client_pkey">
+      <ObjectId>35824</ObjectId>
+      <StateNumber>2374</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>client_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="54" parent="39" name="fkiufyv49up6ged8yr1hfrvbbjm">
+      <ObjectId>35864</ObjectId>
+      <StateNumber>2381</StateNumber>
+      <ColNames>id</ColNames>
+      <RefTableId>35851</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_abstract</RefTableName>
+      <RefKeyName>user_abstract_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="55" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2375</StateNumber>
+      <DefaultExpression>nextval(&apos;criteria_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="56" parent="40" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2375</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="57" parent="40" name="criteria_pkey">
+      <ObjectId>35831</ObjectId>
+      <StateNumber>2375</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="58" parent="40" name="criteria_pkey">
+      <ObjectId>35832</ObjectId>
+      <StateNumber>2375</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>criteria_pkey</UnderlyingIndexName>
     </key>
-    <column id="52" parent="40" name="id">
+    <column id="59" parent="41" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2117</StateNumber>
+      <StateNumber>2376</StateNumber>
       <DefaultExpression>nextval(&apos;criteria_code_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="53" parent="40" name="code">
+    <column id="60" parent="41" name="code">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2117</StateNumber>
+      <StateNumber>2376</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="54" parent="40" name="criteria_id">
+    <column id="61" parent="41" name="criteria_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>2117</StateNumber>
+      <StateNumber>2376</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="55" parent="40" name="criteria_code_pkey">
-      <ObjectId>35775</ObjectId>
-      <StateNumber>2117</StateNumber>
+    <index id="62" parent="41" name="criteria_code_pkey">
+      <ObjectId>35839</ObjectId>
+      <StateNumber>2376</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1137,81 +1186,33 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="56" parent="40" name="criteria_code_pkey">
-      <ObjectId>35776</ObjectId>
-      <StateNumber>2117</StateNumber>
+    <key id="63" parent="41" name="criteria_code_pkey">
+      <ObjectId>35840</ObjectId>
+      <StateNumber>2376</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>criteria_code_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="57" parent="40" name="fkto4j8poklp3n1qy3dubxdnrt9">
-      <ObjectId>35782</ObjectId>
-      <StateNumber>2119</StateNumber>
+    <foreign-key id="64" parent="41" name="fkto4j8poklp3n1qy3dubxdnrt9">
+      <ObjectId>35869</ObjectId>
+      <StateNumber>2382</StateNumber>
       <ColNames>criteria_id</ColNames>
-      <RefTableId>35763</RefTableId>
+      <RefTableId>35827</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>criteria</RefTableName>
       <RefKeyName>criteria_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="58" parent="41" name="id">
+    <column id="65" parent="42" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>2109</StateNumber>
+      <StateNumber>2377</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="59" parent="41" name="created_at">
-      <Position>2</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="60" parent="41" name="first_name">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="61" parent="41" name="last_name">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="62" parent="41" name="middle_name">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="63" parent="41" name="password">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="64" parent="41" name="role">
-      <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="65" parent="41" name="updated_at">
-      <Position>8</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="66" parent="41" name="username">
-      <Position>9</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>2109</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="67" parent="41" name="user_abstract_pkey">
-      <ObjectId>35749</ObjectId>
-      <StateNumber>2109</StateNumber>
+    <index id="66" parent="42" name="doctor_pkey">
+      <ObjectId>35844</ObjectId>
+      <StateNumber>2377</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1219,9 +1220,125 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="68" parent="41" name="user_abstract_pkey">
-      <ObjectId>35750</ObjectId>
-      <StateNumber>2109</StateNumber>
+    <key id="67" parent="42" name="doctor_pkey">
+      <ObjectId>35845</ObjectId>
+      <StateNumber>2377</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>doctor_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="68" parent="42" name="fkevx34l9grc78n1l5l453njg0q">
+      <ObjectId>35874</ObjectId>
+      <StateNumber>2383</StateNumber>
+      <ColNames>id</ColNames>
+      <RefTableId>35851</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_abstract</RefTableName>
+      <RefKeyName>user_abstract_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="69" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2378</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="70" parent="43" name="expert_pkey">
+      <ObjectId>35849</ObjectId>
+      <StateNumber>2378</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="71" parent="43" name="expert_pkey">
+      <ObjectId>35850</ObjectId>
+      <StateNumber>2378</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>expert_pkey</UnderlyingIndexName>
+    </key>
+    <foreign-key id="72" parent="43" name="fkgr9sv7t9vnjusxhnhq2tilc7h">
+      <ObjectId>35879</ObjectId>
+      <StateNumber>2384</StateNumber>
+      <ColNames>id</ColNames>
+      <RefTableId>35851</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_abstract</RefTableName>
+      <RefKeyName>user_abstract_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="73" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2379</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="74" parent="44" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="75" parent="44" name="first_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="76" parent="44" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="77" parent="44" name="middle_name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="78" parent="44" name="password">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="79" parent="44" name="role">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="80" parent="44" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="81" parent="44" name="username">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2379</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="82" parent="44" name="user_abstract_pkey">
+      <ObjectId>35857</ObjectId>
+      <StateNumber>2379</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="83" parent="44" name="user_abstract_pkey">
+      <ObjectId>35858</ObjectId>
+      <StateNumber>2379</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_abstract_pkey</UnderlyingIndexName>

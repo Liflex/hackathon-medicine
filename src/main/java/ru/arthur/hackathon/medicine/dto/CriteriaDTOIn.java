@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class CriteriaDTO {
+public class CriteriaDTOIn {
     private List<String> codes;
     private String description;
     private List<String> criteria;

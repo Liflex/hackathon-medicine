@@ -1,6 +1,7 @@
 package ru.arthur.hackathon.medicine.service;
 
 import lombok.RequiredArgsConstructor;
+import ru.arthur.hackathon.medicine.dao.model.Client;
 import ru.arthur.hackathon.medicine.dao.model.UserAbstract;
 import ru.arthur.hackathon.medicine.dao.repository.UserAuthRepository;
 
