@@ -16,10 +16,13 @@ public class Criteria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(columnDefinition = "text")
     private String description;
-    @OneToMany(mappedBy = "criteria", cascade = CascadeType.ALL)
-    private List<CheckListCriteria> criteria;
-    @OneToMany(mappedBy = "criteria", cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "check_list_criteria_relation")
+    private List<CheckListCriteria> criteriaCheckList;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "code_criteria_relation")
     private List<CriteriaCode> codes;
 
     @Override

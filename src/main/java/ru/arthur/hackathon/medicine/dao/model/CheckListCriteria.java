@@ -15,10 +15,8 @@ public class CheckListCriteria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(columnDefinition = "text")
     private String description;
-
-    @ManyToOne
-    private Criteria criteria;
 
     @Override
     public boolean equals(Object o) {

@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class CriteriaDTOOut {
-    private List<String> codes;
+    private List<CodesDTO> codes;
     private String description;
-    private List<String> criteria;
+    private List<CheckListDTO> criteriaCheckList;
 }
