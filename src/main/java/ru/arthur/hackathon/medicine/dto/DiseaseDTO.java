@@ -26,7 +26,7 @@ public class DiseaseDTO {
     private String complaint; //Жалобы пациента. При сохранении сохраняется в завершенный (новый)  прием
     private String diseaseStatus;
 
-    private Criteria criteria;
+    private CriteriaDTOOut criteria;
     private List<ReceptionDTO> receptions;
     private List<PatientCriteriaCheckListRelationDTO> checkList; //Здесь хранятся отчеты по проделанным процедурам
 
